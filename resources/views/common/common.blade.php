@@ -13,8 +13,43 @@
 
   <body>
     <header class="header">
-      <div>
-
+      <div class="header-container center flex">
+        <a href="">
+          <h2 class="header-app-name">
+            Study Memo ~ <span>スタめも</span> ~
+          </h2>
+        </a>
+        <div class="header-display-info">
+          @if(Auth::check())
+          <div class="header-user-login-state flex">
+            <div class="header-display-menu">
+              <ul class="header-display-menu-list">
+                <a href="#">
+                  <li>メモカテゴリー作成</li>
+                </a>
+                <a href="#">
+                  <li>メモ作成</li>
+                </a>
+              </ul>
+            </div>
+            <div class="header-display-user flex">
+              <p class="header-display-user-name">{{ \Auth::user()->name }}</p>
+              {{ Form::open([ 'route' => [ 'user.logout' ], 'method' => 'post', 'class' => 'header-logout-btn']) }}
+                @csrf
+                <span class="tooltip">
+                  <span class="tooltip-text">ログアウト</span>
+                  {{ Form::button('<i class="fa-solid fa-right-from-bracket"></i>', ['type' => 'submit']) }}
+                </span>
+              {{ Form::close() }}
+            </div>
+          </div>
+          @else
+          <div class="header-user-logout-state">
+            <a href="{{ route('user.signin') }}" class="header-user-signin">新規登録</a>
+            <a href="{{ route('user.login') }}" class="header-user-login">ログイン</a>
+          </div>
+          @endif
+        </div>
       </div>
     </header>
 
