@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+@extends('common.common')
+
+@section('content')
+  <div>
     こんにちは
     @if(Auth::check())
     {{ \Auth::user()->name }}さん
@@ -17,6 +14,5 @@
     <a href="{{ route('user.signin') }}">会員登録</a>
     <a href="{{ route('user.login') }}">ログイン</a>
     @endif
-
-  </body>
-</html>
+  </div>
+@endsection
