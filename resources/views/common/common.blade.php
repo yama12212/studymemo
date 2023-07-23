@@ -13,7 +13,7 @@
 
   <body>
     <header class="header">
-      <div class="header-container center flex">
+      <div class="center content-width flex header-container">
         <a href="">
           <h2 class="header-app-name">
             Study Memo ~ <span>スタめも</span> ~
@@ -21,7 +21,7 @@
         </a>
         <div class="header-display-info">
           @if(Auth::check())
-          <div class="header-user-login-state flex">
+          <div class="flex header-user-login-state">
             <div class="header-display-menu">
               <ul class="header-display-menu-list">
                 <a href="#">
@@ -32,7 +32,7 @@
                 </a>
               </ul>
             </div>
-            <div class="header-display-user flex">
+            <div class="flex header-display-user">
               <p class="header-display-user-name">{{ \Auth::user()->name }}</p>
               {{ Form::open([ 'route' => [ 'user.logout' ], 'method' => 'post', 'class' => 'header-logout-btn']) }}
                 @csrf
@@ -59,8 +59,10 @@
       </div>
     </main>
 
-    <footer>
-
+    <footer class="footer">
+      <div class="content-width center footer-container">
+        <p class="footer-text">Study Memo ~ スタめも ~ ©︎2023</p>
+      </div>
     </footer>
   </body>
 </html>
