@@ -8,6 +8,10 @@ button {
   border: transparent;
 }
 
+.content-width {
+  width: 90%;
+}
+
 .center {
   margin: 0 auto;
 }
@@ -85,7 +89,6 @@ a:hover::before {
 }
 
 .header-container {
-  width: 90%;
   justify-content: space-between;
   align-items: center;
 }
@@ -123,4 +126,42 @@ a:hover::before {
 
 .header-user-login {
   margin-left: 80px;
+}
+
+
+/* 新規登録・ログインフォームレイアウト */
+.form-container {
+  background-color: #ededed;
+  height: 92vh;
+  align-items: center;
+}
+
+.aa {
+  align-items: center;
+}
+
+.form {
+  width: 60%;
+  background-color: #fff;
+  padding: 100px;
+  text-align: center;
+  color: #ff701e;
+  border-radius: 10px;
+}
+
+
+/* footerレイアウト */
+.footer {
+  background-color: rgb(220, 255, 239);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+.footer-text {
+  color: #000;
 }
