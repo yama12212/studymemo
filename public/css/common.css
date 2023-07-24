@@ -129,6 +129,27 @@ a:hover::before {
 }
 
 
+/* 新規登録・ログインフォームレイアウト */
+.form-container {
+  background-color: #ededed;
+  height: 92vh;
+  align-items: center;
+}
+
+.aa {
+  align-items: center;
+}
+
+.form {
+  width: 60%;
+  background-color: #fff;
+  padding: 100px;
+  text-align: center;
+  color: #ff701e;
+  border-radius: 10px;
+}
+
+
 /* footerレイアウト */
 .footer {
   background-color: rgb(220, 255, 239);
