@@ -1,18 +1,14 @@
 @extends('common.common')
 
 @section('content')
-  <div>
-    こんにちは
-    @if(Auth::check())
-    {{ \Auth::user()->name }}さん
-    <form action="{{ route('user.logout') }}" method="post">
-      @csrf
-      <input type="submit" value="ログアウト">
-    </form>
-    @else
-    ゲストさん <br />
-    <a href="{{ route('user.signin') }}">会員登録</a>
-    <a href="{{ route('user.login') }}">ログイン</a>
-    @endif
+
+  <div class="noteListViewArea">
+    <h2 class="noteListViewAreaLabel">ノート一覧</h2>
+    <div class="noteListViewAreaContainer content-width center">
+      <ul class="noteListViewAreaContents flex">
+        <li class="noteListViewAreaContent">ここにノートの見出しが表示</li>
+      </ul>
+    </div>
   </div>
+
 @endsection

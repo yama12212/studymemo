@@ -86,6 +86,7 @@ a:hover::before {
 /* headerレイアウト */
 .header {
   background-color: rgb(220, 255, 239);
+  padding: 6px 0;
 }
 
 .header-container {
@@ -136,9 +137,6 @@ a:hover::before {
   align-items: center;
 }
 
-.aa {
-  align-items: center;
-}
 
 .form {
   width: 60%;
@@ -148,6 +146,30 @@ a:hover::before {
   color: #ff701e;
   border-radius: 10px;
 }
+
+/* mainコンテナレイアウト */
+.container {
+  background-color: #000;
+}
+
+/* グローバルナビゲーション */
+.firstViewGlobalNavMenu {
+  font-size: 18px;
+  gap: 24px;
+  margin: 24px 0;
+  padding: 12px 0;
+  justify-content: space-evenly;
+  border-top: solid 1px  #ff701e;
+  border-bottom: solid 1px  #ff701e;
+}
+
+/* ノート一覧エリア */
+.noteListViewArea {
+  background-color: #fff;
+  color: #000;
+}
+
+
 
 
 /* footerレイアウト */

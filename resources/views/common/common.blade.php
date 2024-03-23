@@ -54,7 +54,27 @@
     </header>
 
     <main>
-      <div class="container">
+      <div class="firstViewGlobalNav">
+        <ul class="firstViewGlobalNavMenu flex">
+          <li class="firstViewGlovalNavLink">
+            <a href="/">ノート一覧</a>
+          </li class="firstViewGlovalNavLink">
+          <li>
+            <a href="#">ノートの新規作成</a>
+          </li>
+          <li class="firstViewGlovalNavLink">
+            <a href="#">テスト出題</a>
+          </li>
+          <li class="firstViewGlovalNavLink">
+            <a href="#">記録</a>
+          </li>
+          <li class="firstViewGlovalNavLink">
+            <a href="#">マニュアル</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container content-width center">
         @yield('content')
       </div>
     </main>
