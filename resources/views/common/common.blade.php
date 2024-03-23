@@ -14,7 +14,7 @@
   <body>
     <header class="header">
       <div class="center content-width flex header-container">
-        <a href="">
+        <a href="/">
           <h2 class="header-app-name">
             Study Memo ~ <span>スタめも</span> ~
           </h2>
