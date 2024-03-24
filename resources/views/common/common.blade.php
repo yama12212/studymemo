@@ -14,7 +14,7 @@
   <body>
     <header class="header">
       <div class="center content-width flex header-container">
-        <a href="/">
+        <a href="/" class="linkUnderline">
           <h2 class="header-app-name">
             Study Memo ~ <span>スタめも</span> ~
           </h2>
@@ -24,10 +24,10 @@
           <div class="flex header-user-login-state">
             <div class="header-display-menu">
               <ul class="header-display-menu-list">
-                <a href="#">
+                <a href="#" class="linkUnderline">
                   <li>メモカテゴリー作成</li>
                 </a>
-                <a href="#">
+                <a href="#" class="linkUnderline">
                   <li>メモ作成</li>
                 </a>
               </ul>
@@ -45,8 +45,8 @@
           </div>
           @else
           <div class="header-user-logout-state">
-            <a href="{{ route('user.signin') }}" class="header-user-signin">新規登録</a>
-            <a href="{{ route('user.login') }}" class="header-user-login">ログイン</a>
+            <a href="{{ route('user.signin') }}" class="header-user-signin linkUnderline">新規登録</a>
+            <a href="{{ route('user.login') }}" class="header-user-login linkUnderline">ログイン</a>
           </div>
           @endif
         </div>
@@ -57,19 +57,19 @@
       <div class="firstViewGlobalNav">
         <ul class="firstViewGlobalNavMenu flex">
           <li class="firstViewGlovalNavLink">
-            <a href="/">ノート一覧</a>
+            <a href="/" class="linkUnderline">ノート一覧</a>
           </li class="firstViewGlovalNavLink">
           <li>
-            <a href="#">ノートの新規作成</a>
+            <a href="#" class="linkUnderline">ノートの新規作成</a>
           </li>
           <li class="firstViewGlovalNavLink">
-            <a href="#">テスト出題</a>
+            <a href="#" class="linkUnderline">テスト出題</a>
           </li>
           <li class="firstViewGlovalNavLink">
-            <a href="#">記録</a>
+            <a href="#" class="linkUnderline">記録</a>
           </li>
           <li class="firstViewGlovalNavLink">
-            <a href="#">マニュアル</a>
+            <a href="#" class="linkUnderline">マニュアル</a>
           </li>
         </ul>
       </div>

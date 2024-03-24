@@ -14,11 +14,15 @@ class PostsTableSeeder extends Seeder
         DB::table('posts')->insert([
             [
                 'title' => 'タイトルテストテストテスト',
-                'post' => 'メモ内容テストテストテスト'
+                'post' => 'メモ内容テストテストテスト',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'title' => 'タイトルテストテストテスト2',
-                'post' => 'メモ内容テストテストテスト2'
+                'post' => 'メモ内容テストテストテスト2',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ]);
     }

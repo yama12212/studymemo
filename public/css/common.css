@@ -1,6 +1,7 @@
 /* 共通レイアウト */
 * {
   font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
+  background-color: #fff;
 }
 
 button {
@@ -21,16 +22,20 @@ button {
   align-items: center;
 }
 
+.textDecorationDisable {
+  text-decoration: none;
+}
+
 
 /* リンクボタンアクションレイアウト */
-a {
+.linkUnderline {
   color: #ff701e;
   text-decoration: none;
   padding-bottom: 5px;
   position: relative;
 }
 
-a::before {
+.linkUnderline::before {
   background: #ff701e;
   content: '';
   width: 100%;
@@ -45,7 +50,7 @@ a::before {
 }
 
 
-a:hover::before {
+.linkUnderline:hover::before {
   transform-origin: center top;
   transform: scale(1, 1);
 }
@@ -87,6 +92,7 @@ a:hover::before {
 .header {
   background-color: rgb(220, 255, 239);
   padding: 6px 0;
+  margin-bottom: 24px;
 }
 
 .header-container {
@@ -156,7 +162,7 @@ a:hover::before {
 .firstViewGlobalNavMenu {
   font-size: 18px;
   gap: 24px;
-  margin: 24px 0;
+  margin-bottom: 24px;
   padding: 12px 0;
   justify-content: space-evenly;
   border-top: solid 1px  #ff701e;
@@ -168,6 +174,46 @@ a:hover::before {
   background-color: #fff;
   color: #000;
 }
+
+.noteListViewAreaContainer {
+  margin-top: 12px;
+}
+
+.noteListViewAreaContentTitleLabel,
+.noteListViewAreaContentTitle {
+  flex-basis: 80%;
+}
+
+.noteListViewAreaContentUpdateTimeLabel,
+.noteListViewAreaContentIconLabel,
+.noteListViewAreaContentUpdateTime,
+.noteListViewAreaContentIconLink {
+  flex-basis: 10%;
+}
+
+.noteListViewAreaContentTitleLabel,
+.noteListViewAreaContentUpdateTimeLabel,
+.noteListViewAreaContentIconLabel,
+.noteListViewAreaContentUpdateTime,
+.noteListViewAreaContentIconLink {
+  text-align: center;
+}
+
+.noteListViewAreaContentLabel {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.noteListViewAreaContent {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.noteListViewAreaContentIconLink a i {
+  padding: 0 10px;
+}
+
 
 
 
@@ -186,4 +232,5 @@ a:hover::before {
 
 .footer-text {
   color: #000;
+  background-color: rgb(220, 255, 239);
 }
