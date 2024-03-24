@@ -25,7 +25,7 @@
             <div class="header-display-menu">
               <ul class="header-display-menu-list">
                 <a href="#" class="linkUnderline">
-                  <li>メモカテゴリー作成</li>
+                  <li>ノート作成</li>
                 </a>
                 <a href="#" class="linkUnderline">
                   <li>メモ作成</li>
@@ -60,7 +60,7 @@
             <a href="/" class="linkUnderline">ノート一覧</a>
           </li class="firstViewGlovalNavLink">
           <li>
-            <a href="#" class="linkUnderline">ノートの新規作成</a>
+            <a href="#" class="linkUnderline">メモの新規作成</a>
           </li>
           <li class="firstViewGlovalNavLink">
             <a href="#" class="linkUnderline">テスト出題</a>

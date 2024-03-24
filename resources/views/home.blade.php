@@ -8,13 +8,13 @@
       <ul class="noteListViewAreaContents">
         {{-- 未ログイン→ログインするとメモが表示されます 未登録→登録しているメモはありませんを表示 --}}
         <li class="noteListViewAreaContentLabel flex">
-          <p class="noteListViewAreaContentTitleLabel">メモタイトル</p>
+          <p class="noteListViewAreaContentTitleLabel">ノートタイトル</p>
           <p class="noteListViewAreaContentUpdateTimeLabel">更新日時</p>
           <p class="noteListViewAreaContentIconLabel">編集/削除</p>
         </li>
 
         <li class="noteListViewAreaContent flex">
-          <p class="noteListViewAreaContentTitle">メモタイトル</p>
+          <p class="noteListViewAreaContentTitle">ノートタイトル</p>
           <p class="noteListViewAreaContentUpdateTime">2024-03-24</p>
           <div class="noteListViewAreaContentIconLink">
             <a href="#" class="textDecorationDisable">
