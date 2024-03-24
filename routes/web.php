@@ -14,6 +14,10 @@ Route::get('/', function() {
     return view('home');
 });
 
+Route::get('/post/create', function() {
+    return view('post.create');
+})->name('post.create');
+
 Route::group(['prefix' => 'user', 'as' => 'user.'], function() {
     Route::get('signin', 'Auth\RegisterController@showRegistrationForm')->name('signin');
     Route::post('signin', 'Auth\RegisterController@register')->name('signin');
