@@ -13,7 +13,10 @@ class AddUseridnoteidColumnPostsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('posts', function (Blueprint $table) {
+            $table->integer('user_id')->nullable(false);
+            $table->integer('note_id')->nullable(false);
+        });
     }
 
     /**
@@ -23,6 +26,9 @@ class AddUseridnoteidColumnPostsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('user_id');
+            $table->dropColumn('note_id');
+        });
     }
 }
