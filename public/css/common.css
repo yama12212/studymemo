@@ -9,6 +9,11 @@ button {
   border: transparent;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .content-width {
   width: 90%;
 }

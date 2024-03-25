@@ -14,7 +14,7 @@
         </li>
 
         <li class="noteListViewAreaContent flex">
-          <p class="noteListViewAreaContentTitle">ノートタイトル</p>
+          <a href="#" class="noteListViewAreaContentTitle">ノートタイトル</a>
           <p class="noteListViewAreaContentUpdateTime">2024-03-24</p>
           <div class="noteListViewAreaContentIconLink">
             <a href="#" class="textDecorationDisable">
@@ -27,6 +27,12 @@
         </li>
       </ul>
     </div>
+  </div>
+
+  <div class="noteCreateButton">
+    <a href="#">
+      <p>ノートを新規作成<i class="fa-sharp fa-regular fa-pen-to-square"></i></p>
+    </a>
   </div>
 
 @endsection
