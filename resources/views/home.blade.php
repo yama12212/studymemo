@@ -35,10 +35,10 @@
     </div>
   </div>
 
-  <div class="noteCreateButton">
-    <a href="/note/new">
+  <a href="/note/new">
+    <div class="noteCreateButton">
       ノートを新規作成<i class="fa-sharp fa-regular fa-pen-to-square"></i>
-    </a>
-  </div>
+    </div>
+  </a>
 
 @endsection

@@ -229,6 +229,15 @@ a {
   padding: 0 10px;
 }
 
+.noteCreateButton {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #a0ff8f;
+  padding: 20px;
+  color: #064b00;
+}
+
 
 /* footerレイアウト */
 .footer {
