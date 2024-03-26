@@ -13,9 +13,13 @@
           <p class="noteListViewAreaContentIconLabel">編集/削除</p>
         </li>
 
+        @foreach($notes as $note)
+        @if($note == null)
+          <p>登録しているメモはありません</p>
+        @else
         <li class="noteListViewAreaContent flex">
-          <a href="#" class="noteListViewAreaContentTitle">ノートタイトル</a>
-          <p class="noteListViewAreaContentUpdateTime">2024-03-24</p>
+          <a href="#" class="noteListViewAreaContentTitle">{{ $note->title }}</a>
+          <p class="noteListViewAreaContentUpdateTime">{{ date('Y/m/d', strtotime($note->updated_at)) }}</p>
           <div class="noteListViewAreaContentIconLink">
             <a href="#" class="textDecorationDisable">
               <i class="fa-sharp fa-regular fa-pen-to-square"></i>
@@ -25,6 +29,8 @@
             </a>
           </div>
         </li>
+        @endif
+        @endforeach
       </ul>
     </div>
   </div>
