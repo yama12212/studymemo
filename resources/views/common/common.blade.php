@@ -54,7 +54,7 @@
     </header>
 
     <main>
-      <div class="firstViewGlobalNav">
+      <nav class="firstViewGlobalNav">
         <ul class="firstViewGlobalNavMenu flex">
           <li class="firstViewGlovalNavLink">
             <a href="/" class="linkUnderline">ノート一覧</a>
@@ -72,11 +72,11 @@
             <a href="#" class="linkUnderline">マニュアル</a>
           </li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="container content-width center">
+      <section class="container content-width center">
         @yield('content')
-      </div>
+      </section>
     </main>
 
     <footer class="footer">
