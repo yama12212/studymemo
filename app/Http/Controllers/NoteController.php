@@ -18,4 +18,8 @@ class NoteController extends Controller
         $notes = $this->note->all();
         return view('home', ['notes' => $notes]);
     }
+
+    public function create() {
+
+    }
 }

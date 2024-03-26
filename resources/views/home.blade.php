@@ -36,8 +36,8 @@
   </div>
 
   <div class="noteCreateButton">
-    <a href="#">
-      <p>ノートを新規作成<i class="fa-sharp fa-regular fa-pen-to-square"></i></p>
+    <a href="/note/new">
+      ノートを新規作成<i class="fa-sharp fa-regular fa-pen-to-square"></i>
     </a>
   </div>
 
