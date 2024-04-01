@@ -23,8 +23,6 @@ class NoteController extends Controller
         $inputs = $request->all();
         $this->note->fill($inputs);
         $this->note->save();
-
-        $notes = $this->note->all();
-        return view('home', ['notes' => $notes]);
+        return redirect()->route('note.index');
     }
 }
