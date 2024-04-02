@@ -4,14 +4,15 @@
 
 <article class="noteShowPage">
   <h2>ノートを編集する</h2>
-  <div class="noteShowForm">
-    {{-- {{ Form::open(['route' => ['note.create', 'method' => 'post']]) }}
+  <div class="noteForm">
+    {{ Form::open(['route' => ['note.edit', 'id' => $note->id],'method' => 'post']) }}
+      @method('PUT')
       @csrf
-      <p class="noteShowFormTitleLabel required">ノートのタイトル</p>
+      <p class="noteFormTitleLabel required">ノートのタイトル</p>
       {{ Form::hidden('user_id', Auth::user()->id) }}
-      {{ Form::text('title', old('title'), ['placeholder' => '例) Laravelまとめ', 'class' => 'noteCreateFormTitle', 'required' => 'required']) }}
-      {{ Form::submit('編集する', ['class' => 'noteShowFormSubmit']) }}
-    {{ Form::close() }} --}}
+      {{ Form::text('title', old('title', $note->title), ['placeholder' => '例) Laravelまとめ', 'class' => 'noteFormTitle', 'required' => 'required']) }}
+      {{ Form::submit('編集する', ['class' => 'noteFormSubmit']) }}
+    {{ Form::close() }}
   </div>
 </article>
 

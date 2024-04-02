@@ -30,4 +30,12 @@ class NoteController extends Controller
         $note = $this->note->find($id);
         return view('note.show', ['note' => $note]);
     }
+
+    public function edit(Request $request, $id) {
+        $inputs = $request->all();
+        $note = $this->note->find($id);
+        $note->fill($inputs);
+        $note->save();
+        return redirect()->route('note.index');
+    }
 }
