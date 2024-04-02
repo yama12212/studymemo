@@ -19,6 +19,7 @@ Route::get('/note/new', function() {
     return view('note.new');
 })->name('note.new');
 Route::post('/note/create', 'NoteController@create')->name('note.create');
+Route::get('/note/{id}/show', 'NoteController@show')->name('note.show');
 
 /* メモ系統パス */
 Route::get('/post/create', function() {

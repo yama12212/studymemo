@@ -21,7 +21,8 @@
           <a href="#" class="noteListViewAreaContentTitle">{{ $note->title }}</a>
           <p class="noteListViewAreaContentUpdateTime">{{ date('Y/m/d', strtotime($note->updated_at)) }}</p>
           <div class="noteListViewAreaContentIconLink">
-            <a href="#" class="textDecorationDisable">
+            <a href="/note/{{ $note->id }}/show" class="textDecorationDisable">
+              ボタン
               <i class="fa-sharp fa-regular fa-pen-to-square"></i>
             </a>
             <a href="#" class="textDecorationDisable">

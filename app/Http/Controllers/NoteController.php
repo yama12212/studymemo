@@ -25,4 +25,9 @@ class NoteController extends Controller
         $this->note->save();
         return redirect()->route('note.index');
     }
+
+    public function show($id) {
+        $note = $this->note->find($id);
+        return view('note.show', ['note' => $note]);
+    }
 }
