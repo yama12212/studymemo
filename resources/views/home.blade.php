@@ -2,6 +2,13 @@
 
 @section('content')
 
+  @guest
+  <div class="noteListGuestView">
+    <p class="noteListGuestText">ログインすると登録したノートが表示されます</p>
+  </div>
+  @endguest
+
+  @auth
   <div class="noteListViewArea">
     <h2 class="noteListViewAreaLabel">ノート一覧</h2>
     <div class="noteListViewAreaContainer content-width center">
@@ -22,7 +29,6 @@
           <p class="noteListViewAreaContentUpdateTime">{{ date('Y/m/d', strtotime($note->updated_at)) }}</p>
           <div class="noteListViewAreaContentIconLink">
             <a href="/note/{{ $note->id }}/show" class="textDecorationDisable">
-              ボタン
               <i class="fa-sharp fa-regular fa-pen-to-square"></i>
             </a>
             <a href="#" class="textDecorationDisable">
@@ -41,5 +47,6 @@
       ノートを新規作成<i class="fa-sharp fa-regular fa-pen-to-square"></i>
     </div>
   </a>
+  @endauth
 
 @endsection
