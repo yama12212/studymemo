@@ -24,7 +24,7 @@
           <div class="flex header-user-login-state">
             <div class="header-display-menu">
               <ul class="header-display-menu-list">
-                <a href="#" class="linkUnderline">
+                <a href="/note/new" class="linkUnderline">
                   <li>ノート作成</li>
                 </a>
                 <a href="#" class="linkUnderline">
@@ -33,7 +33,7 @@
               </ul>
             </div>
             <div class="flex header-display-user">
-              <p class="header-display-user-name">{{ \Auth::user()->name }}</p>
+              <p class="headerDisplayUserName">{{ \Auth::user()->name }}</p>
               {{ Form::open([ 'route' => [ 'user.logout' ], 'method' => 'post', 'class' => 'header-logout-btn']) }}
                 @csrf
                 <span class="tooltip">
@@ -60,7 +60,7 @@
             <a href="/" class="linkUnderline">ノート一覧</a>
           </li class="firstViewGlovalNavLink">
           <li>
-            <a href="/post/create" class="linkUnderline">メモの新規作成</a>
+            <a href="/post/new" class="linkUnderline">メモの新規作成</a>
           </li>
           <li class="firstViewGlovalNavLink">
             <a href="#" class="linkUnderline">テスト出題</a>

@@ -1,7 +1,11 @@
 /* 共通レイアウトパーツ */
 * {
   font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN";
+}
+
+body {
   background-color: #fff;
+  color: #000;
 }
 
 button {
