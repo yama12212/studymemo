@@ -22,7 +22,7 @@
 
         @foreach($notes as $note)
         @if($note == null)
-          <p>登録しているメモはありません</p>
+          <p>登録しているノートはありません</p>
         @else
         <li class="noteListViewAreaContent flex">
           <a href="/post/index/{{ $note->id }}" class="noteListViewAreaContentTitle">{{ $note->title }}</a>
