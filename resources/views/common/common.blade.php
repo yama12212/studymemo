@@ -27,7 +27,7 @@
                 <a href="/note/new" class="linkUnderline">
                   <li>ノート作成</li>
                 </a>
-                <a href="#" class="linkUnderline">
+                <a href="/post/new" class="linkUnderline">
                   <li>メモ作成</li>
                 </a>
               </ul>

@@ -18,14 +18,13 @@ Route::get('/', 'NoteController@index')->name('note.index');
 Route::get('/note/new', function() {
     return view('note.new');
 })->name('note.new');
-Route::get('/note/{id}/show', 'NoteController@show')->name('note.show');
+Route::get('/note/show/{id}', 'NoteController@show')->name('note.show');
 Route::post('/note/create', 'NoteController@create')->name('note.create');
-Route::put('/note/{id}/edit', 'NoteController@edit')->name('note.edit');
+Route::put('/note/edit/{id}', 'NoteController@edit')->name('note.edit');
 
 /* メモ系統パス */
-Route::get('/post/create', function() {
-    return view('post.create');
-})->name('post.create');
+Route::get('/post/index/{id}', 'PostController@index')->name('post.index');
+Route::get('/post/new', 'PostController@new')->name('post.new');
 
 /* 認証系パス */
 Route::group(['prefix' => 'user', 'as' => 'user.'], function() {
