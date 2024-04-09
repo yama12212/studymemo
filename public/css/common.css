@@ -189,51 +189,51 @@ a {
 }
 
 /* ノート一覧エリア */
-.noteListViewArea {
+.listViewArea {
   background-color: #fff;
   color: #000;
 }
 
-.noteListViewAreaContainer {
+.listViewAreaContainer {
   margin-top: 12px;
 }
 
-.noteListViewAreaContentTitleLabel,
-.noteListViewAreaContentTitle {
+.listViewAreaContentTitleLabel,
+.listViewAreaContentTitle {
   flex-basis: 80%;
 }
 
-.noteListViewAreaContentUpdateTimeLabel,
-.noteListViewAreaContentIconLabel,
-.noteListViewAreaContentUpdateTime,
-.noteListViewAreaContentIconLink {
+.listViewAreaContentUpdateTimeLabel,
+.listViewAreaContentIconLabel,
+.listViewAreaContentUpdateTime,
+.listViewAreaContentIconLink {
   flex-basis: 10%;
 }
 
-.noteListViewAreaContentTitleLabel,
-.noteListViewAreaContentUpdateTimeLabel,
-.noteListViewAreaContentIconLabel,
-.noteListViewAreaContentUpdateTime,
-.noteListViewAreaContentIconLink {
+.listViewAreaContentTitleLabel,
+.listViewAreaContentUpdateTimeLabel,
+.listViewAreaContentIconLabel,
+.listViewAreaContentUpdateTime,
+.listViewAreaContentIconLink {
   text-align: center;
 }
 
-.noteListViewAreaContentLabel {
+.listViewAreaContentLabel {
   font-weight: bold;
   font-size: 18px;
 }
 
-.noteListViewAreaContent {
+.listViewAreaContent {
   margin: 10px 0;
   font-size: 16px;
   color: #000;
 }
 
-.noteListViewAreaContentIconLink a i {
+.listViewAreaContentIconLink a i {
   padding: 0 10px;
 }
 
-.noteCreateButton {
+.createButton {
   position: fixed;
   bottom: 40px;
   right: 40px;
