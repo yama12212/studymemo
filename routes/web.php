@@ -25,6 +25,7 @@ Route::put('/note/edit/{id}', 'NoteController@edit')->name('note.edit');
 /* メモ系統パス */
 Route::get('/post/index/{id}', 'PostController@index')->name('post.index');
 Route::get('/post/new', 'PostController@new')->name('post.new');
+Route::post('/post/create', 'PostController@create')->name('post.create');
 
 /* 認証系パス */
 Route::group(['prefix' => 'user', 'as' => 'user.'], function() {

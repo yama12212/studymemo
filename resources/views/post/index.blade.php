@@ -2,7 +2,7 @@
 
 @section('content')
   {{-- メモ閲覧と編集ページを作る閲覧ページで赤シートを追加 --}}
-  <h2>ノートの名前 メモ一覧</h2>
+  <h2>{{ $noteTitle }} メモ一覧</h2>
   <div class="listViewAreaContainer content-width center">
     <ul class="listViewAreaContents">
       <li class="listViewAreaContentLabel flex">
@@ -19,6 +19,9 @@
         <a href="#" class="listViewAreaContentTitle">{{ $post->title }}</a>
         <p class="listViewAreaContentUpdateTime">{{ date('Y/m/d', strtotime($post->updated_at)) }}</p>
         <div class="listViewAreaContentIconLink">
+          <a href="#" class="textDecorationDisable">
+            <i class="fa-regular fa-eye"></i>
+          </a>
           <a href="#" class="textDecorationDisable">
             <i class="fa-sharp fa-regular fa-pen-to-square"></i>
           </a>
