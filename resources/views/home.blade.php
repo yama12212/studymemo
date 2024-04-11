@@ -24,7 +24,7 @@
         @if($note == null)
           <p>登録しているノートはありません</p>
         @else
-        <li class="listViewAreaContent flex">
+        <li class="listViewAreaContent flex listHover">
           <a href="/post/index/{{ $note->id }}" class="listViewAreaContentTitle">{{ $note->title }}</a>
           <p class="listViewAreaContentUpdateTime">{{ date('Y/m/d', strtotime($note->updated_at)) }}</p>
           <div class="listViewAreaContentIconLink">
