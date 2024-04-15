@@ -38,4 +38,10 @@ class NoteController extends Controller
         $note->save();
         return redirect()->route('note.index');
     }
+
+    public function delete($id) {
+        $note = $this->note->find($id);
+        $note->delete();
+        return redirect()->route('note.index');
+    }
 }

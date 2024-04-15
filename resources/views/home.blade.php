@@ -31,9 +31,13 @@
             <a href="/note/show/{{ $note->id }}" class="textDecorationDisable">
               <i class="fa-sharp fa-regular fa-pen-to-square"></i>
             </a>
-            <a href="#" class="textDecorationDisable">
-              <i class="fa-regular fa-trash-can"></i>
-            </a>
+            <form method="post" action="{{ route('note.delete', $note->id) }}">
+              @method('DELETE')
+              @csrf
+              <button class="textDecorationDisable">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </form>
           </div>
         </li>
         @endif

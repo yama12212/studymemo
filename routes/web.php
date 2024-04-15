@@ -21,6 +21,7 @@ Route::get('/note/new', function() {
 Route::get('/note/show/{id}', 'NoteController@show')->name('note.show');
 Route::post('/note/create', 'NoteController@create')->name('note.create');
 Route::put('/note/edit/{id}', 'NoteController@edit')->name('note.edit');
+Route::delete('/note/delete/{id}', 'NoteController@delete')->name('note.delete');
 
 /* メモ系統パス */
 Route::get('/post/index/{id}', 'PostController@index')->name('post.index');
