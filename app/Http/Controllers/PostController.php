@@ -26,6 +26,11 @@ class PostController extends Controller
         return view('post.index', ['posts' => $posts, 'noteTitle' => $noteTitle]);
     }
 
+    public function view($id) {
+        $post = $this->post->find($id);
+        return view('post.view', ['post' => $post]);
+    }
+
     public function new() {
         $currentUserId = Auth::id();
         $currentUserNotes = $this->note->all()->where('user_id', $currentUserId)->toArray();

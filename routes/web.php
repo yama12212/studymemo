@@ -25,6 +25,7 @@ Route::delete('/note/delete/{id}', 'NoteController@delete')->name('note.delete')
 
 /* メモ系統パス */
 Route::get('/post/index/{id}', 'PostController@index')->name('post.index');
+Route::get('/post/view/{id}', 'PostController@view')->name('post.view');
 Route::get('/post/new', 'PostController@new')->name('post.new');
 Route::post('/post/create', 'PostController@create')->name('post.create');
 
