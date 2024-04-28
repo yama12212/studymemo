@@ -45,4 +45,9 @@ class PostController extends Controller
         $this->post->save();
         return redirect()->route('post.index', ['id' => $noteId]);
     }
+
+    public function show($id) {
+        $post = $this->post->find($id);
+        return view('post.show', ['post' => $post]);
+    }
 }

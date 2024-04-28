@@ -20,15 +20,12 @@
         <p class="listViewAreaContentUpdateTime">{{ date('Y/m/d', strtotime($post->updated_at)) }}</p>
         <div class="listViewAreaContentIconLink">
           <a href="/post/view/{{ $post->id }}" class="textDecorationDisable">
-            閲覧
             <i class="fa-regular fa-eye"></i>
           </a>
-          <a href="#" class="textDecorationDisable">
-            編集
+          <a href="/post/show/{{ $post->id }}" class="textDecorationDisable">
             <i class="fa-sharp fa-regular fa-pen-to-square"></i>
           </a>
           <a href="#" class="textDecorationDisable">
-            削除
             <i class="fa-regular fa-trash-can"></i>
           </a>
         </div>
