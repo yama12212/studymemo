@@ -13,7 +13,9 @@ class DropNoteIdColumnTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('posts', function(Blueprint $table) {
+            $table->dropColumn('note_id');
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ class DropNoteIdColumnTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('posts', function(Blueprint $table) {
+            $table->unsignedBigInteger('note_id');
+        });
     }
 }
