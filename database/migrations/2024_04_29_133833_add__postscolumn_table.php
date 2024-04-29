@@ -13,7 +13,18 @@ class AddPostscolumnTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('posts', function(Blueprint $table) {
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onUpdate('CASCADE')
+                ->onDelete('CASCADE');
+            $table->foreign('note_id')
+                ->references('id')
+                ->on('notes')
+                ->onUpdate('CASCADE')
+                ->onDelete('CASCADE');
+        });
     }
 
     /**
@@ -23,6 +34,11 @@ class AddPostscolumnTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('posts', function(Blueprint $table) {
+            $table->dropColumn('user_id');
+            $table->dropColumn('note_id');
+            $table->dropForeign('user_id');
+            $table->dropForeign('note_id');
+        });
     }
 }
