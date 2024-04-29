@@ -13,7 +13,9 @@ class DropUserIdColumnTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('posts', function(Blueprint $table) {
+            $table->dropColumn('user_id');
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ class DropUserIdColumnTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('posts', function(Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
+        });
     }
 }
