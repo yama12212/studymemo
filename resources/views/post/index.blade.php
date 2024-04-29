@@ -25,9 +25,13 @@
           <a href="/post/show/{{ $post->id }}" class="textDecorationDisable">
             <i class="fa-sharp fa-regular fa-pen-to-square"></i>
           </a>
-          <a href="#" class="textDecorationDisable">
-            <i class="fa-regular fa-trash-can"></i>
-          </a>
+          <form method="post" action="{{ route('post.delete', $post->id) }}">
+            @method('DELETE')
+            @csrf
+            <button class="textDecorationDisable">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </form>
         </div>
       </li>
       @endif

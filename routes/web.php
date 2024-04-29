@@ -30,6 +30,7 @@ Route::get('/post/new', 'PostController@new')->name('post.new');
 Route::get('post/show/{id}', 'PostController@show')->name('post.show');
 Route::post('/post/create', 'PostController@create')->name('post.create');
 Route::put('/post/edit/{id}', 'PostController@edit')->name('post.edit');
+Route::delete('/post/delete/{id}', 'PostController@delete')->name('post.delete');
 
 /* 認証系パス */
 Route::group(['prefix' => 'user', 'as' => 'user.'], function() {

@@ -59,4 +59,12 @@ class PostController extends Controller
         $post->save();
         return redirect()->route('post.index', ['id' => $noteId]);
     }
+
+    public function delete($id) {
+        $post = $this->post->find($id);
+        // リレーションでメモに紐づくノートidを取得
+        // $noteId = $this->note->find($post->note_id);
+        $post->delete();
+        return redirect()->route('post.index', ['id' => 1]);
+    }
 }
