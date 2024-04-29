@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Note;
+use Illuminate\Support\Facades\Auth;
 
 class NoteController extends Controller
 {
@@ -15,7 +16,8 @@ class NoteController extends Controller
     }
 
     public function index() {
-        $notes = $this->note->all();
+        $user = Auth::id();
+        $notes = $this->note->all()->where('user_id', '=', $user);
         return view('home', ['notes' => $notes]);
     }
 
