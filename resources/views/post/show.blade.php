@@ -10,7 +10,7 @@
       @csrf
       {{ Form::hidden('user_id', Auth::user()->id) }}
       {{ Form::label('selectNote', '選択しているノート') }}
-      {{ Form::select('note_id', ['リレーションから取得する'], null, ['id' => 'selectNote', 'readonly' => 'true']) }}
+      {{ Form::select('note_id', $noteTitle, null, ['id' => 'selectNote', 'readonly' => 'true']) }}
 
       {{ Form::label('noteFormTitleLabel', 'メモのタイトル') }}
       {{ Form::text('title', $post->title, ['class' => 'noteFormTitle', 'id' => 'noteFormTitleLabel']) }}

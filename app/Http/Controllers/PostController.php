@@ -48,7 +48,8 @@ class PostController extends Controller
 
     public function show($id) {
         $post = $this->post->find($id);
-        return view('post.show', ['post' => $post]);
+        $noteTitle = array($post->note->title);
+        return view('post.show', ['post' => $post, 'noteTitle' => $noteTitle]);
     }
 
     public function edit(Request $request, $id) {
