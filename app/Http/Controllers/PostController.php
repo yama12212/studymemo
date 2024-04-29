@@ -50,4 +50,13 @@ class PostController extends Controller
         $post = $this->post->find($id);
         return view('post.show', ['post' => $post]);
     }
+
+    public function edit(Request $request, $id) {
+        $inputs = $request->all();
+        $noteId = $request->note_id;
+        $post = $this->post->find('id');
+        $post->fill();
+        $post->save();
+        return redirect()->route('post.index', ['id' => $noteId]);
+    }
 }
