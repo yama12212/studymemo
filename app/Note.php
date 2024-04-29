@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\User;
 
 class Note extends Model
 {
@@ -16,4 +17,9 @@ class Note extends Model
     ];
 
     protected $table = 'notes';
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
