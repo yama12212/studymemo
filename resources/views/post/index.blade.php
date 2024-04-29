@@ -16,7 +16,7 @@
         <p>登録しているメモはありません</p>
       @else
       <li class="listViewAreaContent flex listHover">
-        <a href="#" class="listViewAreaContentTitle">{{ $post->title }}</a>
+        <a href="/post/show/{{ $post->id }}" class="listViewAreaContentTitle">{{ $post->title }}</a>
         <p class="listViewAreaContentUpdateTime">{{ date('Y/m/d', strtotime($post->updated_at)) }}</p>
         <div class="listViewAreaContentIconLink">
           <a href="/post/view/{{ $post->id }}" class="textDecorationDisable">
