@@ -54,8 +54,8 @@ class PostController extends Controller
     public function edit(Request $request, $id) {
         $inputs = $request->all();
         $noteId = $request->note_id;
-        $post = $this->post->find('id');
-        $post->fill();
+        $post = $this->post->find($id);
+        $post->fill($inputs);
         $post->save();
         return redirect()->route('post.index', ['id' => $noteId]);
     }
