@@ -4,6 +4,7 @@
 
 <article>
   <h2>メモの新規作成</h2>
+  @include('common.error_messages')
   <div class="noteForm">
     {{ Form::open(['route' => ['post.create', 'method' => 'post']]) }}
       @csrf

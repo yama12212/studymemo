@@ -4,6 +4,7 @@
 
 <article>
   <h2>{{ $post->title }}_編集</h2>
+  @include('common.error_messages')
   <div class="noteForm">
     {{ Form::open(['route' => ['post.edit', 'id' => $post->id],'method' => 'post']) }}
       @method('PUT')

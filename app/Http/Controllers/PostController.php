@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 use App\Post;
 use App\Note;
 use Auth;
@@ -38,7 +38,7 @@ class PostController extends Controller
         return view('post.new', ['currentUserNotesCollect' => $currentUserNotesCollect]);
     }
 
-    public function create(Request $request) {
+    public function create(PostRequest $request) {
         $inputs = $request->all();
         $noteId = $request->note_id;
         $this->post->fill($inputs);
@@ -53,7 +53,7 @@ class PostController extends Controller
         return view('post.show', ['post' => $post, 'noteTitle' => $noteTitle, 'noteId' => $noteId]);
     }
 
-    public function edit(Request $request, $id) {
+    public function edit(PostRequest $request, $id) {
         $inputs = $request->all();
         $noteId = $request->note_id;
         $post = $this->post->find($id);
