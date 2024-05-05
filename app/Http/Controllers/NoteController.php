@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\NoteRequest;
 use App\Note;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,7 +25,7 @@ class NoteController extends Controller
         return view('note.new');
     }
 
-    public function create(Request $request) {
+    public function create(NoteRequest $request) {
         $inputs = $request->all();
         $this->note->fill($inputs);
         $this->note->save();
@@ -37,7 +37,7 @@ class NoteController extends Controller
         return view('note.show', ['note' => $note]);
     }
 
-    public function edit(Request $request, $id) {
+    public function edit(NoteRequest $request, $id) {
         $inputs = $request->all();
         $note = $this->note->find($id);
         $note->fill($inputs);

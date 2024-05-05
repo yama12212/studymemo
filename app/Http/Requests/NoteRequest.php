@@ -13,7 +13,7 @@ class NoteRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,16 @@ class NoteRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required|max:50',
+            'user_id' => 'required',
+        ];
+    }
+
+    public function messages() {
+        return [
+            'title.required' => 'ノートのタイトルを入力してください',
+            'title.max' => 'ノートのタイトルは50文字以内で入力してください',
+            'user_id.required' => 'ユーザー情報が正しく送信されていません',
         ];
     }
 }
