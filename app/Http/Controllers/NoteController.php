@@ -21,6 +21,10 @@ class NoteController extends Controller
         return view('home', ['notes' => $notes]);
     }
 
+    public function new() {
+        return view('note.new');
+    };
+
     public function create(Request $request) {
         $inputs = $request->all();
         $this->note->fill($inputs);

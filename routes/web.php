@@ -15,9 +15,7 @@
 Route::get('/', 'NoteController@index')->name('note.index');
 
 /* ノート系統パス */
-Route::get('/note/new', function() {
-    return view('note.new');
-})->name('note.new');
+Route::get('/note/new', 'NoteController@new')->name('note.new');
 Route::get('/note/show/{id}', 'NoteController@show')->name('note.show');
 Route::post('/note/create', 'NoteController@create')->name('note.create');
 Route::put('/note/edit/{id}', 'NoteController@edit')->name('note.edit');
