@@ -13,6 +13,8 @@ class PostController extends Controller
     private $note;
 
     public function __construct() {
+        $this->middleware('auth');
+
         $posts = new Post();
         $this->post = $posts;
 

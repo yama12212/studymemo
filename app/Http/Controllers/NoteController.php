@@ -11,6 +11,8 @@ class NoteController extends Controller
     private $note;
 
     public function __construct() {
+        $this->middleware('auth');
+
         $note = new Note();
         $this->note = $note;
     }
