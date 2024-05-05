@@ -15,20 +15,24 @@
 Route::get('/', 'NoteController@index')->name('note.index');
 
 /* ノート系統パス */
-Route::get('/note/new', 'NoteController@new')->name('note.new');
-Route::get('/note/show/{id}', 'NoteController@show')->name('note.show');
-Route::post('/note/create', 'NoteController@create')->name('note.create');
-Route::put('/note/edit/{id}', 'NoteController@edit')->name('note.edit');
-Route::delete('/note/delete/{id}', 'NoteController@delete')->name('note.delete');
+Route::group(['prefix' => 'note', 'as' => 'note.'], function() {
+    Route::get('/new', 'NoteController@new')->name('new');
+    Route::get('/show/{id}', 'NoteController@show')->name('show');
+    Route::post('/create', 'NoteController@create')->name('create');
+    Route::put('/edit/{id}', 'NoteController@edit')->name('edit');
+    Route::delete('/delete/{id}', 'NoteController@delete')->name('delete');
+});
 
 /* メモ系統パス */
-Route::get('/post/index/{id}', 'PostController@index')->name('post.index');
-Route::get('/post/view/{id}', 'PostController@view')->name('post.view');
-Route::get('/post/new', 'PostController@new')->name('post.new');
-Route::get('post/show/{id}', 'PostController@show')->name('post.show');
-Route::post('/post/create', 'PostController@create')->name('post.create');
-Route::put('/post/edit/{id}', 'PostController@edit')->name('post.edit');
-Route::delete('/post/delete/{id}', 'PostController@delete')->name('post.delete');
+Route::group(['prefix' => 'post', 'as' => 'post.'], function() {
+    Route::get('/index/{id}', 'PostController@index')->name('index');
+    Route::get('/view/{id}', 'PostController@view')->name('view');
+    Route::get('/new', 'PostController@new')->name('new');
+    Route::get('/show/{id}', 'PostController@show')->name('show');
+    Route::post('/create', 'PostController@create')->name('create');
+    Route::put('/edit/{id}', 'PostController@edit')->name('edit');
+    Route::delete('/delete/{id}', 'PostController@delete')->name('delete');
+});
 
 /* 認証系パス */
 Route::group(['prefix' => 'user', 'as' => 'user.'], function() {

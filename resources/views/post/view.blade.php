@@ -18,7 +18,7 @@
   </div>
 </article>
 
-<a href="#">
+<a href="/post/show/{{ $post->id }}">
   <div class="createButton">
     編集する<i class="fa-sharp fa-regular fa-pen-to-square"></i>
   </div>

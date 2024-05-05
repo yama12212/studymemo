@@ -23,7 +23,7 @@ class NoteController extends Controller
 
     public function new() {
         return view('note.new');
-    };
+    }
 
     public function create(Request $request) {
         $inputs = $request->all();
