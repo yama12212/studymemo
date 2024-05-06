@@ -84,5 +84,7 @@
         <p class="footer-text">Study Memo ~ スタめも ~ ©︎2023</p>
       </div>
     </footer>
+
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
   </body>
 </html>

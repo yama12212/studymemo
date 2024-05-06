@@ -19,7 +19,7 @@
       {{ Form::text('title', $post->title, ['placeholder' => '例) CRUD処理について', 'class' => 'noteFormTitle', 'id' => 'noteFormTitleLabel']) }}
 
       {{ Form::label('noteFormTextareaLabel', 'メモ内容') }}
-      {{ Form::textarea('post', $post->post, ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea', 'id' => 'noteFormTextareaLabel']) }}
+      {{ Form::textarea('post', $post->post, ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea ckeditor', 'id' => 'noteFormTextareaLabel']) }}
 
       {{ Form::submit('編集する', ['class' => 'noteFormSubmit']) }}
     {{ Form::close() }}
