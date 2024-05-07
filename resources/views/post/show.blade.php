@@ -11,14 +11,16 @@
       @csrf
       {{ Form::hidden('user_id', Auth::user()->id) }}
 
-      {{ Form::label('selectNote', '選択しているノート') }}
+      {{ Form::label('selectNote', '選択しているノート', ['class' => 'required']) }}
       {{ Form::select('note_id', $noteTitle, null, ['id' => 'selectNote', 'readonly' => 'true']) }}
       {{ Form::hidden('note_id', $noteId) }}
 
-      {{ Form::label('noteFormTitleLabel', 'メモのタイトル') }}
+      {{ Form::label('noteFormTitleLabel', 'メモのタイトル', ['class' => 'required']) }}
       {{ Form::text('title', $post->title, ['placeholder' => '例) CRUD処理について', 'class' => 'noteFormTitle', 'id' => 'noteFormTitleLabel']) }}
 
-      {{ Form::label('noteFormTextareaLabel', 'メモ内容') }}
+      {{ Form::label('noteFormTextareaLabel', 'メモ内容', ['class' => 'required']) }}
+      {{ Form::button('赤線を引く', ['id' => 'drowRedUnderline']) }}
+      {{ Form::button('リセット', ['id' => 'reset']) }}
       {{ Form::textarea('post', $post->post, ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea ckeditor', 'id' => 'noteFormTextareaLabel']) }}
 
       {{ Form::submit('編集する', ['class' => 'noteFormSubmit']) }}
