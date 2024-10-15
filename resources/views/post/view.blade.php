@@ -13,7 +13,7 @@
       {{ Form::text('title', $post->title, ['class' => 'noteFormTitle', 'id' => 'noteFormTitleLabel','readonly' => true]) }}
 
       {{ Form::label('noteFormTextareaLabel', 'メモ内容') }}
-      {{ Form::textarea('post', $post->post, ['class' => 'noteFormTextarea ckeditor', 'id' => 'noteFormTextareaLabel', 'readonly' => true]) }}
+      {{ Form::textarea('post', $post->post, ['class' => 'noteFormTextarea', 'id' => 'noteFormTextareaLabel', 'readonly' => true]) }}
     {{ Form::close() }}
   </div>
 </article>

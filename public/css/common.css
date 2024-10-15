@@ -251,6 +251,10 @@ input, textarea, select {
   border-radius: 20px;
 }
 
+/* ユーザー側でマークした勉強用語のレイアウト設定 */
+.termsToStudy {
+  color: red;
+}
 
 /* footerレイアウト */
 .footer {

@@ -13,6 +13,11 @@
         パスワード:<input type="password" name="password"><br>
         <button type="submit" name="action" value="send">送信</button>
       </form>
+      <p>
+        名前:guest<br>
+        メールアドレス:guest@guest.com<br>
+        パスワード:password0000
+      </p>
     </div>
   </div>
 </div>

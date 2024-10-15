@@ -19,7 +19,7 @@
       {{ Form::label('noteFormTextareaLabel', 'メモ内容', ['class' => 'required']) }}
       {{ Form::button('赤線を引く', ['id' => 'drowRedUnderline']) }}
       {{ Form::button('リセット', ['id' => 'reset']) }}
-      {{ Form::textarea('post', old('post'), ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea ckeditor', 'id' => 'noteFormTextareaLabel', 'required' => 'required']) }}
+      {{ Form::textarea('post', old('post'), ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea', 'id' => 'noteFormTextareaLabel', 'required' => 'required']) }}
       {{ Form::submit('作成する', ['class' => 'noteFormSubmit']) }}
     {{ Form::close() }}
   </div>
