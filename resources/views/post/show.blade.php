@@ -11,17 +11,23 @@
       @csrf
       {{ Form::hidden('user_id', Auth::user()->id) }}
 
-      {{ Form::label('selectNote', '選択しているノート', ['class' => 'required']) }}
+      <p class="required">選択しているノート</p>
       {{ Form::select('note_id', $noteTitle, null, ['id' => 'selectNote', 'readonly' => 'true']) }}
       {{ Form::hidden('note_id', $noteId) }}
 
-      {{ Form::label('noteFormTitleLabel', 'メモのタイトル', ['class' => 'required']) }}
+      <p class="required">メモのタイトル</p>
       {{ Form::text('title', $post->title, ['placeholder' => '例) CRUD処理について', 'class' => 'noteFormTitle', 'id' => 'noteFormTitleLabel']) }}
 
-      {{ Form::label('noteFormTextareaLabel', 'メモ内容', ['class' => 'required']) }}
+      <p class="required">メモの内容</p>
+      {{ Form::textarea('post', $post->post, ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea', 'id' => 'noteFormTextareaLabel']) }}
       {{ Form::button('赤線を引く', ['id' => 'drowRedUnderline']) }}
       {{ Form::button('リセット', ['id' => 'reset']) }}
-      {{ Form::textarea('post', $post->post, ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea', 'id' => 'noteFormTextareaLabel']) }}
+
+      <p class="required">テスト出題形式</p>
+      {{ Form::radio('questionFormat', 'questionFormat_title', true, ['id' => 'questionFormat_title']) }}
+      {{ Form::label('questionFormat_title', 'タイトルを隠す') }}
+      {{ Form::radio('questionFormat', 'questionFormat_text', null, ['id' => 'questionFormat_text']) }}
+      {{ Form::label('questionFormat_text', '赤文字を隠す') }}
 
       {{ Form::submit('編集する', ['class' => 'noteFormSubmit']) }}
     {{ Form::close() }}
