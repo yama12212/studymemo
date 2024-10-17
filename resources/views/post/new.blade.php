@@ -22,9 +22,9 @@
       {{ Form::button('リセット', ['id' => 'reset']) }}
 
       <p class="required">テスト出題形式</p>
-      {{ Form::radio('testQuestionFormat', '1', true, ['id' => 'questionFormat_title']) }}
+      {{ Form::radio('testQuestionFormatStatus', '1', true, ['id' => 'questionFormat_title']) }}
       {{ Form::label('questionFormat_title', 'タイトルを隠す') }}
-      {{ Form::radio('testQuestionFormat', '2', null, ['id' => 'questionFormat_text']) }}
+      {{ Form::radio('testQuestionFormatStatus', '2', null, ['id' => 'questionFormat_text']) }}
       {{ Form::label('questionFormat_text', '赤文字を隠す') }}
 
       {{ Form::submit('作成する', ['class' => 'noteFormSubmit']) }}

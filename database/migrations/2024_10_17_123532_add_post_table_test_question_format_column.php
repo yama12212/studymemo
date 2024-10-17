@@ -14,7 +14,7 @@ class AddPostTableTestQuestionFormatColumn extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table->integer('testQuestionFormatStatus')->comment('1:タイトルを隠す 2:赤文字を隠す')->nullable(false)->after('post');
         });
     }
 
@@ -26,7 +26,7 @@ class AddPostTableTestQuestionFormatColumn extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            //
+            $table->dropColumn('testQuestionFormatStatus');
         });
     }
 }
