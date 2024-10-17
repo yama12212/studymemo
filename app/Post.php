@@ -14,6 +14,7 @@ class Post extends Model
     protected $fillable = [
         'title',
         'post',
+        'testQuestionFormatStatus',
         'user_id',
         'note_id'
     ];
