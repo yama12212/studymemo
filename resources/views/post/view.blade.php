@@ -4,21 +4,19 @@
 
 <article>
   <h2>{{ $post->title }}_閲覧</h2>
-  <div class="noteForm">
-    {{ Form::open() }}
-      {{ Form::label('selectNote', '選択しているノート') }}
-      {{ Form::select('note_id', ['リレーションから取得する'], null, ['id' => 'selectNote', 'readonly' => true]) }}
-
-      {{ Form::label('noteFormTitleLabel', 'メモのタイトル') }}
-      {{ Form::text('title', $post->title, ['class' => 'noteFormTitle', 'id' => 'noteFormTitleLabel','readonly' => true]) }}
-
-      {{ Form::label('noteFormTextareaLabel', 'メモ内容') }}
-      {{ Form::textarea('post', $post->post, ['class' => 'noteFormTextarea', 'id' => 'noteFormTextareaLabel', 'readonly' => true]) }}
-    {{ Form::close() }}
+  <div class="postViewContainer">
+    <div class="postViewTitle">
+      <h3>メモのタイトル</h3>
+      <p>{{ $post->title }}</p>
+    </div>
+    <div class="postViewText">
+      <h3>メモ内容</h3>
+      <p>{!! $post->post !!}</p>
+    </div>
   </div>
 </article>
 
-<a href="/post/show/{{ $post->id }}">
+<a href="{{ route('post.show', ['id' => $post->id]) }}">
   <div class="createButton">
     編集する<i class="fa-sharp fa-regular fa-pen-to-square"></i>
   </div>

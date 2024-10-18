@@ -29,7 +29,7 @@
       {{ Form::radio('testQuestionFormatStatus', '2', null, ['id' => 'questionFormat_text']) }}
       {{ Form::label('questionFormat_text', '赤文字を隠す') }}
 
-      {{ Form::submit('編集する', ['class' => 'noteFormSubmit']) }}
+      {{ Form::submit('更新する', ['class' => 'noteFormSubmit']) }}
     {{ Form::close() }}
   </div>
 </article>
