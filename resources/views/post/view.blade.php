@@ -2,17 +2,12 @@
 
 @section('content')
 
-<article>
-  <h2>{{ $post->title }}_閲覧</h2>
-  <div class="postViewContainer">
-    <div class="postViewTitle">
-      <h3>メモのタイトル</h3>
-      <p>{{ $post->title }}</p>
-    </div>
-    <div class="postViewText">
-      <h3>メモ内容</h3>
-      <p>{!! $post->post !!}</p>
-    </div>
+<article class="postView">
+  <h2 class="postViewTitle">{{ $post->title }}_閲覧</h2>
+  <div class="postViewContent">
+    <h3>メモ内容</h3>
+    <p id="postViewText">{{ $post->post }}</p>
+    {{-- jsで特定の値を<div class="termsToStudy"></div>に置き換える --}}
   </div>
 </article>
 

@@ -85,9 +85,7 @@
       </div>
     </footer>
 
-    <script src="//cdn.ckeditor.com/4.15.0/full/ckeditor.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="{{ asset('js/ckeditor.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ mix('js/test.js') }}"></script>
   </body>
 </html>
