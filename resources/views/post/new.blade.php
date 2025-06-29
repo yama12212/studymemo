@@ -17,7 +17,7 @@
       {{ Form::text('title', old('title'), ['placeholder' => '例) CRUD処理について', 'class' => 'noteFormTitle', 'id' => 'noteFormTitleLabel','required' => 'required']) }}
 
       <p class="required">メモの内容</p>
-      {{ Form::textarea('post', old('post'), ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea', 'id' => 'noteFormTextareaLabel', 'required' => 'required']) }}
+      {{ Form::textarea('post', old('post'), ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea', 'id' => 'postFormText', 'required' => 'required']) }}
       {{ Form::button('赤線を引く', ['id' => 'drowRedUnderline']) }}
       {{ Form::button('リセット', ['id' => 'reset']) }}
 
@@ -33,3 +33,7 @@
 </article>
 
 @endsection
+
+@push('post_script')
+  <script src="{{ mix('js/post_button.js') }}"></script>
+@endpush

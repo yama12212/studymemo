@@ -81,11 +81,12 @@
 
     <footer class="footer">
       <div class="content-width center footer-container">
-        <p class="footer-text">Study Memo ~ スタめも ~ ©︎2023</p>
+        <p class="footer-text">Study Memo ~ スタめも ~ ©︎2025</p>
       </div>
     </footer>
 
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ mix('js/test.js') }}"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <script src="{{ asset('/js/post_button.js') }}"></script>
+    @stack('post_script')
   </body>
 </html>

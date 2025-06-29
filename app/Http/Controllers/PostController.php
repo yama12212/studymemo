@@ -6,6 +6,7 @@ use App\Http\Requests\PostRequest;
 use App\Post;
 use App\Note;
 use Auth;
+use App\Utils\TagSanitize;
 
 class PostController extends Controller
 {
@@ -30,6 +31,11 @@ class PostController extends Controller
 
     public function view($id) {
         $post = $this->post->find($id);
+
+        //サニタイズ
+        // $apply_tags = TagSanitize::getContentApplyTagList();
+        // $textSanitize = TagSanitize::sanitize($text, $apply_tags);
+
         return view('post.view', ['post' => $post]);
     }
 
