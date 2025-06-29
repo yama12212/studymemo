@@ -86,7 +86,6 @@
     </footer>
 
     <script src="{{ asset('/js/app.js') }}"></script>
-    <script src="{{ asset('/js/post_button.js') }}"></script>
-    @stack('post_script')
+    <script src="{{ mix('js/post_button.js') }}" defer></script>
   </body>
 </html>

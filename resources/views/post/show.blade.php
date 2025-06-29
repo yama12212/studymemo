@@ -1,9 +1,5 @@
 @extends('common.common')
 
-@push('post_script')
-  <script src="{{ asset('/js/post_button.js') }}"></script>
-@endpush
-
 @section('content')
 
 <article>
