@@ -2,6 +2,10 @@
 
 @section('content')
 
+@push('post_button')
+  <script src="{{ mix('js/post_button.js') }}"></script>
+@endpush
+
 <article>
   <h2>{{ $post->title }}_編集</h2>
   @include('common.error_messages')
