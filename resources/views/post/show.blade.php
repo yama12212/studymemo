@@ -25,7 +25,7 @@
       <p class="required">メモの内容</p>
       {{ Form::textarea('post', $post->post, ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea', 'id' => 'postFormText', 'required' => 'required']) }}
       {{ Form::button('文字を赤くする', ['id' => 'makeTextRed']) }}
-      {{ Form::button('リセット', ['id' => 'reset']) }}
+      {{ Form::button('タグをリセット', ['id' => 'makeTextRedReset']) }}
 
       <p class="required">テスト出題形式</p>
       {{ Form::radio('testQuestionFormatStatus', '1', true, ['id' => 'questionFormat_title']) }}
