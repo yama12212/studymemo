@@ -28,6 +28,7 @@ class PostRequest extends FormRequest
             'post' => 'required|max:1000',
             'user_id' => 'required',
             'note_id' => 'required',
+            'testQuestionFormatStatus' => 'required',
         ];
     }
 
@@ -38,6 +39,7 @@ class PostRequest extends FormRequest
             'post.required' => 'メモの内容を入力してください',
             'post.max' => 'メモの内容は:max文字以内で入力してください',
             'user_id.required' => 'ユーザー情報が正しく送信されていません',
+            'testQuestionFormatStatus.required' => 'テスト出題形式を選択してください',
         ];
     }
 }
