@@ -26,7 +26,8 @@ class PostController extends Controller
     public function index($id) {
         $posts = $this->post->all()->where('note_id', $id);
         $noteTitle = $this->note->find($id)->title;
-        return view('post.index', ['posts' => $posts, 'noteTitle' => $noteTitle]);
+        $noteId = $this->note->find($id)->id;
+        return view('post.index', ['posts' => $posts, 'noteTitle' => $noteTitle, 'noteId' => $noteId]);
     }
 
     public function view($id) {
@@ -39,11 +40,12 @@ class PostController extends Controller
         return view('post.view', ['post' => $post]);
     }
 
-    public function new() {
+    public function new($id) {
         $currentUserId = Auth::id();
         $currentUserNotes = $this->note->all()->where('user_id', $currentUserId)->toArray();
         $currentUserNotesCollect = array_column($currentUserNotes, 'title', 'id');
-        return view('post.new', ['currentUserNotesCollect' => $currentUserNotesCollect]);
+        $currentSelectNote = $this->note->find($id);
+        return view('post.new', ['currentUserNotesCollect' => $currentUserNotesCollect, 'currentSelectNote' => $currentSelectNote]);
     }
 
     public function create(PostRequest $request) {

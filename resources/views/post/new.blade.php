@@ -4,31 +4,37 @@
 
 <article>
   <h2>メモの新規作成</h2>
+  <h4>選択中のノート：{{ $currentSelectNote->title }}</h4>
   @include('common.error_messages')
   <div class="noteForm">
-    {{ Form::open(['route' => ['post.create', 'method' => 'post']]) }}
+    <form method="post" action="{{ route('post.create') }}">
       @csrf
-      {{ Form::hidden('user_id', Auth::user()->id) }}
+      <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+      <input type="hidden" name="note_id" value="{{ $currentSelectNote->id }}">
 
-      <p class="required">登録するノートを選択してください</p>
-      {{ Form::select('note_id', $currentUserNotesCollect, null, ['id' => 'selectNote']) }}
+      {{-- <p class="required">登録するノートを選択してください</p>
+      <select name="note_id" id="selectNote" null>
+        @foreach ($currentUserNotesCollect as $id => $title)
+          <option value="{{ $id }}">{{ $title }}</option>
+        @endforeach
+      </select> --}}
 
       <p class="required">メモのタイトル</p>
-      {{ Form::text('title', old('title'), ['placeholder' => '例) CRUD処理について', 'class' => 'noteFormTitle', 'id' => 'noteFormTitleLabel','required' => 'required']) }}
+      <input type="text" name="title" value="{{ old('title') }}" placeholder="例) CRUD処理について" class="noteFormTitle" id="noteFormTitleLabel" required>
 
       <p class="required">メモの内容</p>
-      {{ Form::textarea('post', old('post'), ['placeholder' => '例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する', 'class' => 'noteFormTextarea', 'id' => 'postFormText', 'required' => 'required']) }}
-      {{ Form::button('赤線を引く', ['id' => 'drowRedUnderline']) }}
-      {{ Form::button('リセット', ['id' => 'reset']) }}
+      <textarea name="post" value="{{ old('post') }}" placeholder="例）CはCreate、RはRead、UはUpdate、DはDeleteを意味する" class="noteFormTextarea" id="postFormText" required cols="80" rows="12"></textarea>
+      <button value="赤線を引く" id="drowRedUnderline"></button>
+      <button value="リセット" id="reset"></button>
 
       <p class="required">テスト出題形式</p>
-      {{ Form::radio('testQuestionFormatStatus', '1', true, ['id' => 'questionFormat_title']) }}
-      {{ Form::label('questionFormat_title', 'タイトルを隠す') }}
-      {{ Form::radio('testQuestionFormatStatus', '2', null, ['id' => 'questionFormat_text']) }}
-      {{ Form::label('questionFormat_text', '赤文字を隠す') }}
+      <input type="radio" name="testQuestionFormatStatus" value="1" id="questionFormat_title" true>
+      <label for="questionFormat_title">タイトルを隠す</label>
+      <input type="radio" name="testQuestionFormatStatus" value="2" id="questionFormat_text" null>
+      <label for="questionFormat_text">赤文字を隠す</label>
 
-      {{ Form::submit('作成する', ['class' => 'noteFormSubmit']) }}
-    {{ Form::close() }}
+      <input type="submit" value="作成する" class="noteFormSubmit">
+    </form>
   </div>
 </article>
 

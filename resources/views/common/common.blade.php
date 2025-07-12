@@ -34,13 +34,15 @@
             </div>
             <div class="flex header-display-user">
               <p class="headerDisplayUserName">{{ \Auth::user()->name }}</p>
-              {{ Form::open([ 'route' => [ 'user.logout' ], 'method' => 'post', 'class' => 'header-logout-btn']) }}
-                @csrf
+              <form action="{{ route('user.logout') }}", method="post", class="header-logout-btn">
+              @csrf
                 <span class="tooltip">
                   <span class="tooltip-text">ログアウト</span>
-                  {{ Form::button('<i class="fa-solid fa-right-from-bracket"></i>', ['type' => 'submit']) }}
+                  <button type="submit">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                  </button>
                 </span>
-              {{ Form::close() }}
+              </form>
             </div>
           </div>
           @else
