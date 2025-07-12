@@ -39,7 +39,7 @@
     </ul>
   </div>
 
-  <a href="/post/new/{{ $noteId }}">
+  <a href="/post/new_setNoteid/{{ $noteId }}">
     <div class="createButton">
       メモを新規作成<i class="fa-sharp fa-regular fa-pen-to-square"></i>
     </div>

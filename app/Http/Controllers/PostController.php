@@ -40,12 +40,12 @@ class PostController extends Controller
         return view('post.view', ['post' => $post]);
     }
 
-    public function new($id) {
+    public function new_setNoteid($id) {
         $currentUserId = Auth::id();
         $currentUserNotes = $this->note->all()->where('user_id', $currentUserId)->toArray();
         $currentUserNotesCollect = array_column($currentUserNotes, 'title', 'id');
         $currentSelectNote = $this->note->find($id);
-        return view('post.new', ['currentUserNotesCollect' => $currentUserNotesCollect, 'currentSelectNote' => $currentSelectNote]);
+        return view('post.new_setNoteid', ['currentUserNotesCollect' => $currentUserNotesCollect, 'currentSelectNote' => $currentSelectNote]);
     }
 
     public function create(PostRequest $request) {
