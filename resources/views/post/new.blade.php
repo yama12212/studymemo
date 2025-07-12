@@ -4,20 +4,18 @@
 
 <article>
   <h2>メモの新規作成</h2>
-  <h4>選択中のノート：{{ $currentSelectNote->title }}</h4>
   @include('common.error_messages')
   <div class="noteForm">
     <form method="post" action="{{ route('post.create') }}">
       @csrf
       <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-      <input type="hidden" name="note_id" value="{{ $currentSelectNote->id }}">
 
-      {{-- <p class="required">登録するノートを選択してください</p>
+      <p class="required">登録するノートを選択してください</p>
       <select name="note_id" id="selectNote" null>
         @foreach ($currentUserNotesCollect as $id => $title)
           <option value="{{ $id }}">{{ $title }}</option>
         @endforeach
-      </select> --}}
+      </select>
 
       <p class="required">メモのタイトル</p>
       <input type="text" name="title" value="{{ old('title') }}" placeholder="例) CRUD処理について" class="noteFormTitle" id="noteFormTitleLabel" required>

@@ -28,6 +28,7 @@ Route::group(['prefix' => 'post', 'as' => 'post.'], function() {
     Route::get('/index/{id}', 'PostController@index')->name('index');
     Route::get('/view/{id}', 'PostController@view')->name('view');
     Route::get('/new_setNoteid/{id}', 'PostController@new_setNoteid')->name('new_setNoteid');
+    Route::get('/new', 'PostController@new')->name('new');
     Route::get('/show/{id}', 'PostController@show')->name('show');
     Route::post('/create', 'PostController@create')->name('create');
     Route::put('/edit/{id}', 'PostController@edit')->name('edit');

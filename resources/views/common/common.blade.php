@@ -62,7 +62,7 @@
             <a href="/" class="linkUnderline">ノート一覧</a>
           </li class="firstViewGlovalNavLink">
           <li>
-            <a href="/post/new" class="linkUnderline">メモの新規作成</a>
+            <a href="{{ route('post.new') }}" class="linkUnderline">メモの新規作成</a>
           </li>
           <li class="firstViewGlovalNavLink">
             <a href="#" class="linkUnderline">テスト出題</a>
